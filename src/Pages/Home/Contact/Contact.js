@@ -1,8 +1,9 @@
 import React from 'react';
+import { HiOutlineMailOpen } from 'react-icons/hi';
 
 const Contact = () => {
     return (
-        <div className="my-32 grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-gray-100 text-gray-800">
+        <div className="w-4/5 mx-auto my-32 grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-gray-100 text-gray-800">
             <div className="flex flex-col justify-between">
                 <div className="space-y-2">
                     <button className="text-4xl lg:text-left font-bold lg:text-5xl flex">CONTACT ME</button>
@@ -27,7 +28,7 @@ const Contact = () => {
                     <label for="message" className="text-sm">Message</label>
                     <textarea id="message" rows="3" name='message' className="w-full p-3 rounded bg-gray-100 border-2 border-emerald-500"></textarea>
                 </div>
-                <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded bg-violet-600 text-gray-50">Send Message</button>
+                <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded bg-emerald-500 text-gray-50">Send Message</button>
             </form>
         </div>
     );
