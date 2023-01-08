@@ -5,11 +5,11 @@ import Navbar from '../Shared/Navbar/Navbar';
 
 const Main = () => {
     return (
-        <>
+        <div className='scroll-smooth'>
             <Navbar />
             <Outlet />
             <Footer />
-        </>
+        </div>
     );
 };
 

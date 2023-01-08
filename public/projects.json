@@ -1,0 +1,38 @@
+[
+    {
+        "id": "01",
+        "title": "LastBook",
+        "img": "https://i.ibb.co/Yh0P8mk/LastBook.png",
+        "img2": "https://i.ibb.co/KbmyLBL/Last-Book-Form.png",
+        "img3": "https://i.ibb.co/GRZnKdL/Last-Book-Dashboard.png",
+        "client": "https://github.com/Kaiser-Tanveer/Used-Books-Client-Complete-Project-.git",
+        "live": "https://last-books.web.app/",
+        "details": "It is a second handed books selling website for students. There is a Dashboard to manage Admin routes, Seller routes.",
+        "detail2": "In this website a successful payment method is added. I used React.js as a front-end technology and Tailwind CSS as a CSS framework. Used some React.js packages to faithfully finish the website.",
+        "detail3": "For back-end I used Express.js. Implemented JWT token for a strong verification. Used MongoDB as a database. And added two sign-in method Email and Google sign-in."
+    },
+    {
+        "id": "02",
+        "title": "FoodMart",
+        "img": "https://i.ibb.co/NysZ3jz/FoodMart.png",
+        "img2": "https://i.ibb.co/SrYKQr5/Food-Mart-Form.png",
+        "img3": "https://i.ibb.co/BqY8BYx/Food-Mart-Service.png",
+        "client": "https://github.com/Kaiser-Tanveer/FoodMart-Client-BackEnd-DataBaseIntegretion-.git",
+        "live": "https://food-mart-client.web.app/",
+        "details": "It is an own garden’s food selling website with a seller friendly option.",
+        "detail2": "A seller can add a product easily with a few information. I used React.js as a front-end technology and Tailwind CSS as a CSS framework. Used some React.js packages to faithfully finish the website.",
+        "detail3": "For back-end I used Express.js. Used MongoDB as a database. And added two sign-in method Email and Google sign-in."
+    },
+    {
+        "id": "03",
+        "img": "https://i.ibb.co/sstYp1Q/EduShop.png",
+        "img2": "https://i.ibb.co/ykcRg6m/Edu-Shop-Form.png",
+        "img3": "https://i.ibb.co/LnVGgyJ/Edu-Shop-Order.png",
+        "title": "EduShop",
+        "client": "https://github.com/Kaiser-Tanveer/Edu-Shop-Client.git",
+        "live": "https://edu-shop-kaiser.web.app/",
+        "details": "A student goods selling website where a user can get a product within a few costs. Especially focused on UI design.",
+        "detail2": "Buyer can add a product to the wishlist or my order page. Google and facebook login implemented. Used CRUD operation to manage data with the database.",
+        "detail3": "For front-end I used React.js and for back-end Express.js. Used MongoDB database. And added three sign-in method Email, Google and Facebook sign-in."
+    }
+]
