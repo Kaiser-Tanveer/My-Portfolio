@@ -13,7 +13,7 @@ const Contact = () => {
                         <h2 className="text-4xl lg:text-left font-bold lg:text-5xl flex">CONTACT <span className='hidden lg:inline-block ml-4'> ME</span>
                             <HiOutlinePaperAirplane className='rotate-45 ml-4' /></h2>
                     </Zoom>
-                    <div className="text-gray-100">At first give your Name, Email and then Give the subject of you message. And at last type the message you want to sent.</div>
+                    <div className="text-gray-100">Need to build a Web Application?? or update a Web Application?? <br /> Please, Contact me</div>
                 </div>
                 <img src="https://hkbyte.com/doodles/Contact%20Doodle.svg" alt="" className="w-full h-full animate-bounce mt-7" />
             </div>

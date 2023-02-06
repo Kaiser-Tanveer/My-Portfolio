@@ -34,7 +34,9 @@ const Banner = () => {
                                 delaySpeed={1000}
                             />
                         </span></h1>
-                        <p className="mb-5 lg:w-3/4">I am comfortable to develop Web Applications. I am passionate about my code and to contribute a company where I get opportunity to explore. I will code hardly to grow up the company and myself.</p>
+                        <div className='lg:w-[38em]'>
+                            <p className="mb-5">I am comfortable to develop Web Applications. I am passionate about my code and to contribute a company where I get opportunity to explore. I will code hardly to grow up the company and myself.</p>
+                        </div>
                         <div className='mx-auto w-full lg:mr-auto mb-10 lg:mb-0'>
                             <a href={resume} download={resume}>
                                 <BtnComponent>Download Resume <HiOutlineDownload className='ml-3' /></BtnComponent>
