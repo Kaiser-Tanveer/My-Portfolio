@@ -26,7 +26,7 @@ const ProjectDetails = () => {
         return <Spinner />
     }
     return (
-        <div className='w-4/5 mx-auto mb-32'>
+        <div className='w-full md:w-4/5 mx-auto mb-32'>
             <Zoom>
                 <h2 className='text-center lg:text-left text-5xl uppercase text-emerald-500 font-bold pb-10'>{title}</h2>
             </Zoom>
@@ -53,7 +53,7 @@ const ProjectDetails = () => {
                     </div>
                 </div>
                 <div className='text-white'>
-                    <h3 className='text-3xl pb-10 text-center font-bold'>Project Details</h3>
+                    <h3 className='text-3xl pb-10 text-center font-bold underline'>Project Details</h3>
                     <ol className=''>
                         <li className='mb-4 list-disc'>{details}</li>
                         <li className='mb-4 list-disc'>{detail2}</li>

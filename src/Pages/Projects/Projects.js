@@ -4,23 +4,26 @@ import { useNavigation } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 import useTitle from '../../MyHooks/useTitle';
 import Zoom from 'react-reveal';
+import { useQuery } from '@tanstack/react-query';
 
 
 const Projects = () => {
     useTitle('Projects');
-    const [projects, setProjects] = useState("");
-    const navigation = useNavigation();
+    const { isLoading, refetch, data: projects = [] } = useQuery({
+        queryKey: ["/projects"],
+        queryFn: async () => {
+            const res = await fetch('https://my-portfolio-server-sand.vercel.app/projects');
+            const data = await res.json();
+            return data;
+        }
+    });
 
-    fetch('https://my-portfolio-server-sand.vercel.app/projects')
-        .then(res => res.json())
-        .then(data => setProjects(data))
-
-    if (navigation.state === "loading") {
+    if (isLoading) {
         return <Spinner />;
     }
 
     return (
-        <div className='mb-32 w-4/5 mx-auto'>
+        <div className='mb-32 w-5/6 mx-auto'>
             <Zoom>
                 <h1 className='pb-10 text-white text-5xl text-center lg:text-left font-bold'>PROJECTS</h1>
             </Zoom>

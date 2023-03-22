@@ -6,14 +6,14 @@ import Zoom from 'react-reveal';
 const Contact = () => {
     useTitle('Contacts');
     return (
-        <div className="w-4/5 mx-auto mb-32 grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 text-white border-2 border-emerald-500" style={{ boxShadow: '2px 3px 12px rgb(16, 185, 129)' }}>
+        <div className="w-5/6 mx-auto mb-32 grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 text-white border-2 border-emerald-500" style={{ boxShadow: '2px 3px 12px rgb(16, 185, 129)' }}>
             <div className="flex flex-col justify-between">
                 <div className="space-y-2 lg:-ml-14">
                     <Zoom>
                         <h2 className="text-4xl lg:text-left font-bold lg:text-5xl flex">CONTACT <span className='hidden lg:inline-block ml-4'> ME</span>
                             <HiOutlinePaperAirplane className='rotate-45 ml-4' /></h2>
                     </Zoom>
-                    <div className="text-gray-100">Need to build a Web Application or update a Web Application?? <br /> Please, Contact me</div>
+                    <div className="text-gray-100 pt-6">Need to build a Web Application or update a Web Application?? <br /> Please, Contact me</div>
                 </div>
                 <img src="https://hkbyte.com/doodles/Contact%20Doodle.svg" alt="" className="w-full h-full animate-bounce mt-7" />
             </div>
@@ -34,7 +34,7 @@ const Contact = () => {
                     <label for="message" className="text-sm">Message</label>
                     <textarea id="message" rows="3" name='message' className="w-full p-3 rounded bg-gray-100 text-black font-semibold border-2 border-emerald-500"></textarea>
                 </div>
-                <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded border border-emerald-500 hover:bg-emerald-500 text-emerald-500 hover:text-white">Send Message</button>
+                <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded border border-emerald-500 hover:bg-emerald-500 text-emerald-500 hover:text-white hover:scale-110 duration-500">Send Message</button>
             </form>
         </div>
     );

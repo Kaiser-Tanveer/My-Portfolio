@@ -1,59 +1,42 @@
 import React, { useState } from 'react';
 import useTitle from '../../MyHooks/useTitle';
 import blogBg from '../../Assets/Banners/myPortfolioBlog.png';
-import { FaCheckCircle } from 'react-icons/fa';
+import SingleBlog from './SingleBlog';
 
 const Blog = () => {
     const [more, setMore] = useState(false);
     useTitle('Blog');
     const blogs = [
         {
-            details: "I am much comfortable of UI designing. Click here to see the result."
+            id: 1,
+            details: "I am much comfortable of UI designing. I am passionate most to design the UI. Check the experiences:",
+            link: "https://edu-shop-kaiser.web.app/"
         },
         {
-            details: "I am a full stack developer. I work with MERN Stack. Here is my full stack project."
+            id: 2,
+            details: "I have created a full stack resell website using stripe payment method. Review the application:",
+            link: "https://last-books.web.app/"
         },
         {
-            details: "Web application experiences are shown here. Review my experiences."
+            id: 3,
+            details: "I have experiences on team projects. I have led a team to complete a full stack project. I managed the Github, handled the UI, code on Front-end a little bit on the Back-end. Here is the project:",
+            link: "https://bravo-bank.web.app/"
         }
     ]
     return (
-        <article className='w-4/5 mx-auto pb-32'>
+        <article className='w-5/6 mx-auto pb-32'>
             <h2 className='text-5xl text-emerald-500 font-bold lf'>My Blog</h2>
             <div className='grid lg:grid-cols-2 gap-5 my-10 items-center border-2 border-emerald-500 shadow-lg shadow-emerald-300 rounded-lg p-6'>
                 <div><img src={blogBg} alt="Banner-Background" className='rounded-md' /></div>
-                <div className='lg:ml-10'>
+                <div className='lg:ml-10 group'>
                     <p>
                         {
-                            blogs.map(blog => <>
-                                <div className='flex items-start my-4'>
-                                    <FaCheckCircle className='text-emerald-500 mr-2 text-xl' />
-                                    {
-                                        more ?
-                                            <p>{blog?.details}
-                                                {
-                                                    blog?.details.length > 70 &&
-                                                    <>
-                                                        ..<button onClick={() => setMore(!more)} className='text-left font-bold link-hover link-info'>read less</button>
-                                                    </>
-                                                }
-                                            </p>
-                                            :
-                                            <p>
-                                                {
-                                                    blog?.details.length > 70 ?
-                                                        <>
-                                                            {blog?.details.slice(0, 70)} ...<button
-                                                                onClick={() => setMore(!more)}
-                                                                className='font-bold link-hover link-info'>read more</button>
-                                                        </>
-                                                        :
-                                                        <>{blog?.details}</>
-                                                }
-                                            </p>
-                                    }
-                                </div>
-                            </>)
+                            blogs.map(blog => <SingleBlog
+                                key={blog.id}
+                                blog={blog}
+                                more={more}
+                                setMore={setMore}
+                            />)
                         }
                     </p>
                 </div>
