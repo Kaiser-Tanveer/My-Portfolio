@@ -27,7 +27,7 @@ const Projects = () => {
             <Zoom>
                 <h1 className='pb-10 text-white text-5xl text-center lg:text-left font-bold'>PROJECTS</h1>
             </Zoom>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 group'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
                     projects &&
                     projects.map(project => <ProjectsCard

@@ -14,7 +14,7 @@ const About = () => {
                         <h2 className="card-title text-white text-4xl font-bold justify-center">
                             Kaiser Tanveer
                         </h2>
-                        <p className='text-white text-center lg:w-3/5 mx-auto pt-5'>I am a MERN Stack Developer. I am comfortable to develop Web Applications. I am passionate about my code and to contribute a company where I get opportunity to explore. I will code hardly to grow up the company and myself.</p>
+                        <p className='text-white text-justify lg:w-3/5 mx-auto pt-5'>I am a MERN Stack Developer. I am comfortable to develop Web Applications. I am passionate about my code and to contribute a company where I get opportunity to explore. I will code hardly to grow up the company and myself.</p>
                         <div className="card-actions mx-auto mt-5 text-white">
                             <div className="flex mb-5 flex-grow lg:justify-start">
                                 <a className='p-4 text-xl ml-5 rounded-full hover:bg-emerald-500' style={{ boxShadow: '2px 3px 12px gray' }} href='mailto:kaisertanveer0@gmail.com'><FaEnvelope /></a>

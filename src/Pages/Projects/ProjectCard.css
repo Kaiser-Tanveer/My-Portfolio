@@ -1,0 +1,27 @@
+.card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}

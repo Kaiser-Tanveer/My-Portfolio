@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ProjectsCard = ({ project }) => {
     const { img, title, client, live, _id } = project;
     return (
-        <div className="rounded-md lg:relative border-2 border-emerald-500 duration-500 text-white group-hover:blur-sm hover:!blur-none group-hover:scale-90 hover:!scale-100" style={{ boxShadow: '2px 3px 12px rgb(16, 185, 129)' }}>
+        <div className="rounded-md lg:relative border-2 border-emerald-500 duration-500 text-white group hover:scale-110" style={{ boxShadow: '2px 3px 12px rgb(16, 185, 129)' }}>
             <PhotoProvider>
                 <PhotoView src={img}>
                     <img src={img} alt="projectImg" className="w-full rounded-t-lg h-72 p-6 border-2 border-b-emerald-500 border-t-0 border-x-0 lg:group-hover:blur-sm" />

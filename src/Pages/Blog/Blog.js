@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useTitle from '../../MyHooks/useTitle';
 import blogBg from '../../Assets/Banners/myPortfolioBlog.png';
 import SingleBlog from './SingleBlog';
 
 const Blog = () => {
-    const [more, setMore] = useState(false);
     useTitle('Blog');
     const blogs = [
         {
@@ -34,8 +33,6 @@ const Blog = () => {
                             blogs.map(blog => <SingleBlog
                                 key={blog.id}
                                 blog={blog}
-                                more={more}
-                                setMore={setMore}
                             />)
                         }
                     </p>
