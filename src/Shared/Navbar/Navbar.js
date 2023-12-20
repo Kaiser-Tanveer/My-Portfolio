@@ -38,6 +38,20 @@ const Navbar = () => {
             </div>
         }
     </>
+    const lgMenuItems = <>
+        <li
+            className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/'><HiOutlineHome /><span className='hideDrawer group-hover:block lg:hidden'>Home</span></Link></li>
+        <li
+            className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/projects'><HiOutlineBriefcase /><span className='hideDrawer group-hover:block lg:hidden'>Projects</span></Link></li>
+        <li
+            className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/contacts'><HiPhoneMissedCall /><span className='hideDrawer group-hover:block lg:hidden'>Contacts</span></Link></li>
+        <li
+            className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/skills'><HiOutlineChartBar /><span className='hideDrawer group-hover:block lg:hidden'>Skills</span></Link></li>
+        <li
+            className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/about'><HiOutlineUser /><span className='hideDrawer group-hover:block lg:hidden'>About</span></Link></li>
+        <li
+            className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/blog'><HiOutlineTable /><span className='hideDrawer group-hover:block lg:hidden'>Blog</span></Link></li>
+    </>
     return (
         <div className="navbar lg:w-4/5 mx-auto">
             <div className="navbar-start">
@@ -52,14 +66,14 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="hidden lg:flex ">
-                    <ul className="menu lg:fixed z-30 menu-vertical -ml-40">
-                        {menuItems}
+                    <ul className="menu lg:fixed z-30 menu-vertical -ml-40 group">
+                        {lgMenuItems}
                     </ul>
                 </div>
             </div>
-            <div className="navbar-end justify-end">
+            <Link to='/' className="navbar-end justify-end">
                 <img src={logo} alt="" className='h-14 lg:fixed lg:-mr-32 lg:mt-10' />
-            </div>
+            </Link>
         </div>
     );
 };

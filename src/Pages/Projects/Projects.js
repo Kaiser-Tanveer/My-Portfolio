@@ -1,6 +1,4 @@
 import ProjectsCard from './ProjectsCard';
-import { useState } from 'react';
-import { useNavigation } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 import useTitle from '../../MyHooks/useTitle';
 import Zoom from 'react-reveal';
@@ -9,7 +7,7 @@ import { useQuery } from '@tanstack/react-query';
 
 const Projects = () => {
     useTitle('Projects');
-    const { isLoading, refetch, data: projects = [] } = useQuery({
+    const { isLoading, data: projects = [] } = useQuery({
         queryKey: ["/projects"],
         queryFn: async () => {
             const res = await fetch('https://my-portfolio-server-sand.vercel.app/projects');
@@ -21,7 +19,6 @@ const Projects = () => {
     if (isLoading) {
         return <Spinner />;
     }
-
     return (
         <div className='mb-32 w-5/6 mx-auto'>
             <Zoom>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { HiOutlinePaperAirplane } from 'react-icons/hi';
 import useTitle from '../../../MyHooks/useTitle';
+import contact from '../../../Assets/Banners/contactUs.png';
 import Zoom from 'react-reveal';
 
 const Contact = () => {
@@ -13,9 +14,9 @@ const Contact = () => {
                         <h2 className="text-4xl lg:text-left font-bold lg:text-5xl flex">CONTACT <span className='hidden lg:inline-block ml-4'> ME</span>
                             <HiOutlinePaperAirplane className='rotate-45 ml-4' /></h2>
                     </Zoom>
-                    <div className="text-gray-100 pt-6">Need to build a Web Application or update a Web Application?? <br /> Please, Contact me</div>
+                    <div className="text-gray-100 pt-6">Need to build or update a Web Application?? <br /> Please, Contact me →</div>
                 </div>
-                <img src="https://hkbyte.com/doodles/Contact%20Doodle.svg" alt="" className="w-full h-full animate-bounce mt-7" />
+                <img src={contact} alt="" className="-ml-[15%] w-auto h-full mt-7" />
             </div>
             <form action="https://formsubmit.co/4d0f0b5d684d0f9ac4ae76f0e90be61e" method="POST" noValidate="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                 <div>

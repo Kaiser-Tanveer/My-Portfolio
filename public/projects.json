@@ -9,7 +9,7 @@
         "live": "https://bravo-bank.web.app/",
         "details": "It is a full functional Banking website. It is a Team Project with 3 team members. Completed within 3 weeks.",
         "detail2": "In this website a user request to open an account and when admin approve he would hold that account. After creating the account user can apply for a card and for a loan with some condition. If admin approve user can get the card and loan. User also can deposit money online on a condition",
-        "detail3": "Technologies & Packages: Frontend: React TypesCript, React Router Dom, Tanstack Query, React Hook Form, EmailJS, Firebase Authentication, Express JS, MongoDB, Vercel etc."
+        "detail3": "Technologies & Packages: Frontend- React TypeScript, React Router Dom, TanStack Query, React Hook Form, EmailJS, Firebase Authentication, Express JS, MongoDB, Vercel etc."
     },
     {
         "id": "02",
