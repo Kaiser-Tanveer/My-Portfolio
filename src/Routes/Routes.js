@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path: '/project/:id',
                 element: <ProjectDetails />,
-                loader: async ({ params }) => await fetch(`https://my-portfolio-server-sand.vercel.app/project/${params.id}`),
+                loader: async ({ params }) => await fetch(`https://portfolio-server-sooty-omega.vercel.app/project/${params.id}`),
             },
             {
                 path: '/contacts',

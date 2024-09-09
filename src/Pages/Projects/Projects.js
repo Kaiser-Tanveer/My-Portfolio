@@ -10,7 +10,7 @@ const Projects = () => {
     const { isLoading, data: projects = [] } = useQuery({
         queryKey: ["/projects"],
         queryFn: async () => {
-            const res = await fetch('https://my-portfolio-server-sand.vercel.app/projects');
+            const res = await fetch('https://portfolio-server-sooty-omega.vercel.app/projects');
             const data = await res.json();
             return data;
         }

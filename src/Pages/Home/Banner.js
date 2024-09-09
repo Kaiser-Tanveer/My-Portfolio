@@ -7,7 +7,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import resume from '../../Assets/KaiserTanveerResume.pdf';
 import useTitle from '../../MyHooks/useTitle';
 import { Zoom } from 'react-reveal';
-import { FaEnvelope, FaGithub, FaLinkedinIn, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaFacebookF, FaGithub, FaLinkedinIn, FaPhone } from 'react-icons/fa';
 
 const Banner = () => {
     useTitle('Home')
@@ -36,11 +36,11 @@ const Banner = () => {
                             />
                         </span></h1>
                         <div className='lg:w-[38em]'>
-                            <p className="mb-5">I am comfortable to develop Web Applications. I am passionate about my code and to contribute a company where I get opportunity to explore. I will code hardly to grow up the company and myself.</p>
+                            <p className="mb-5 opacity-75 hover:opacity-100 cursor-text">I am a dedicated Web Application Developer with a deep passion for crafting high-quality code. My enthusiasm for coding drives me to contribute effectively to a company where I can explore new opportunities and grow both professionally and personally. I am committed to working diligently to advance the company’s success and my own skills. Let’s build something amazing together!</p>
                         </div>
                         <div className="flex mb-5 justify-center lg:justify-start">
-                            <a className='p-4 text-xl ml-5 lg:ml-0 rounded-full hover:bg-emerald-500' style={{ boxShadow: '2px 3px 12px gray' }} href='mailto:kaisertanveer0@gmail.com'><FaEnvelope /></a>
-                            {/* <a className='p-4 text-xl ml-5 rounded-full hover:bg-emerald-500' style={{ boxShadow: '2px 3px 12px gray' }} href='https://web.facebook.com/Kaiser2581' target='_blank'><FaFacebookF /></a> */}
+                            <a className='p-4 text-xl lg:ml-0 rounded-full hover:bg-emerald-500' style={{ boxShadow: '2px 3px 12px gray' }} href='mailto:kaisertanveer0@gmail.com'><FaEnvelope /></a>
+                            <a className='p-4 text-xl ml-5 rounded-full hover:bg-emerald-500' style={{ boxShadow: '2px 3px 12px gray' }} href='https://web.facebook.com/Kaiser2581' target='_blank'><FaFacebookF /></a>
                             <a className='p-4 text-xl ml-5 rounded-full hover:bg-emerald-500' style={{ boxShadow: '2px 3px 12px gray' }} href='https://www.linkedin.com/in/kaiser-tanveer/' target='_blank'><FaLinkedinIn /></a>
                             <a className='p-4 text-xl ml-5 rounded-full hover:bg-emerald-500' style={{ boxShadow: '2px 3px 12px gray' }} href='https://github.com/Kaiser-Tanveer' target='_blank'><FaGithub /></a>
                             <a className='p-4 text-xl ml-5 rounded-full hover:bg-emerald-500' style={{ boxShadow: '2px 3px 12px gray' }} href='tel: +8801851072581'><FaPhone className='rotate-180' /></a>

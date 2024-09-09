@@ -7,16 +7,16 @@ import Zoom from 'react-reveal';
 const Contact = () => {
     useTitle('Contacts');
     return (
-        <div className="w-5/6 mx-auto mb-32 grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 text-white border-2 border-emerald-500" style={{ boxShadow: '2px 3px 12px rgb(16, 185, 129)' }}>
-            <div className="flex flex-col justify-between">
-                <div className="space-y-2 lg:-ml-14">
+        <div className="w-5/6 mx-auto mb-32 grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-10 md:py-16 rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 text-white border-2 border-emerald-500" style={{ boxShadow: '2px 3px 12px rgb(16, 185, 129)' }}>
+            <div className="flex flex-col justify-between md:pl-4 md:pr-16">
+                <div className="">
                     <Zoom>
-                        <h2 className="text-4xl lg:text-left font-bold lg:text-5xl flex">CONTACT <span className='hidden lg:inline-block ml-4'> ME</span>
+                        <h2 className="text-4xl lg:text-left font-bold lg:text-5xl flex items-center justify-center md:justify-start">CONTACT <span className='hidden lg:inline-block ml-4'> ME</span>
                             <HiOutlinePaperAirplane className='rotate-45 ml-4' /></h2>
                     </Zoom>
-                    <div className="text-gray-100 pt-6">Need to build or update a Web Application?? <br /> Please, Contact me →</div>
+                    <div className="text-gray-100 pt-6 text-center md:text-left">Need to build or update a Web Application?? <br /> Please, Contact me →</div>
                 </div>
-                <img src={contact} alt="" className="-ml-[15%] w-auto h-full mt-7" />
+                <img src={contact} alt="" className="w-auto h-full mt-7" />
             </div>
             <form action="https://formsubmit.co/4d0f0b5d684d0f9ac4ae76f0e90be61e" method="POST" noValidate="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                 <div>

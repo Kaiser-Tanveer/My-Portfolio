@@ -5,10 +5,9 @@ import Spinner from '../Spinner/Spinner';
 import Zoom from 'react-reveal';
 
 const ProjectDetails = () => {
-    const info = useLoaderData()[0];
+    const info = useLoaderData();
     const navigation = useNavigation();
 
-    console.log(info);
     const { title, detail2, detail3, img, img2, img3, details } = info;
 
     const images = [
