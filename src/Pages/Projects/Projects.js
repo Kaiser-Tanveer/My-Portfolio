@@ -1,31 +1,37 @@
+import React, { useEffect, useState } from 'react';
 import ProjectsCard from './ProjectsCard';
 import Spinner from '../Spinner/Spinner';
 import useTitle from '../../MyHooks/useTitle';
 import Zoom from 'react-reveal';
-import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 const Projects = () => {
     useTitle('Projects');
 
-    const { isLoading, isError, error, data: projects = [] } = useQuery({
-        queryKey: ["/projects"],
-        queryFn: async () => {
-            const res = await fetch('https://portfolio-server-sooty-omega.vercel.app/projects');
-            if (!res.ok) {
-                throw new Error('Network response was not ok');
+    const [projects, setProjects] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const response = await axios.get('https://portfolio-server-sooty-omega.vercel.app/projects');
+                setProjects(response.data);
+            } catch (err) {
+                setError(err);
+            } finally {
+                setIsLoading(false);
             }
-            const data = await res.json();
-            return data;
-        },
-        staleTime: 5000, // Data is fresh for 5 seconds
-        cacheTime: 10000 // Cache lasts for 10 seconds
-    });
+        };
+
+        fetchProjects();
+    }, []);
 
     if (isLoading) {
         return <Spinner />;
     }
 
-    if (isError) {
+    if (error) {
         return <div>Error: {error.message}</div>;
     }
 
