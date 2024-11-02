@@ -5,6 +5,11 @@ import useTitle from '../../MyHooks/useTitle';
 import Zoom from 'react-reveal';
 import axios from 'axios';
 
+// Set the BASE_URL based on the environment (production or development)
+const BASE_URL = process.env.NODE_ENV === 'production'
+    ? 'https://portfolio-server-nchp36izs-kaisertanveers-projects.vercel.app'
+    : 'http://localhost:3000';
+
 const Projects = () => {
     useTitle('Projects');
 
@@ -15,7 +20,7 @@ const Projects = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get('https://portfolio-server-sooty-omega.vercel.app/projects');
+                const response = await axios.get(`${BASE_URL}/projects`);
                 setProjects(response.data);
             } catch (err) {
                 setError(err);
@@ -44,7 +49,7 @@ const Projects = () => {
                 {
                     projects.map(project => (
                         <ProjectsCard
-                            key={project.id}
+                            key={project._id}
                             project={project}
                         />
                     ))
