@@ -9,11 +9,6 @@ import Projects from "../Pages/Projects/Projects";
 import Skills from "../Pages/Skills/Skills";
 import NotFound from "../Pages/NotFount/NotFound";
 
-// Determine the base URL based on environment (local or production)
-const BASE_URL = process.env.NODE_ENV === 'production'
-    ? 'https://portfolio-server-nchp36izs-kaisertanveers-projects.vercel.app'
-    : 'http://localhost:3000';
-
 const router = createBrowserRouter([
     {
         path: '*',
@@ -28,14 +23,14 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: '/projects',
+                path: '/api/projects',
                 element: <Projects />,
             },
             {
-                path: '/project/:id',
+                path: '/api/project/:id',
                 element: <ProjectDetails />,
                 loader: async ({ params }) => {
-                    const response = await fetch(`${BASE_URL}/projects/${params.id}`, {
+                    const response = await fetch(`https://portfolio-server-bay-seven.vercel.app/api/projects/${params.id}`, {
                         headers: {
                             'Content-Type': 'application/json',
                         },
@@ -62,6 +57,6 @@ const router = createBrowserRouter([
             },
         ]
     }
-])
+]);
 
 export default router;

@@ -42,7 +42,7 @@ const Navbar = () => {
         <li
             className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/'><HiOutlineHome /><span className='hideDrawer group-hover:block lg:hidden'>Home</span></Link></li>
         <li
-            className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/projects'><HiOutlineBriefcase /><span className='hideDrawer group-hover:block lg:hidden'>Projects</span></Link></li>
+            className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/api/projects'><HiOutlineBriefcase /><span className='hideDrawer group-hover:block lg:hidden'>Projects</span></Link></li>
         <li
             className='group-hover:scale-100 hover:transition-all bg-gray-600 lg:bg-transparent hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/contacts'><HiPhoneMissedCall /><span className='hideDrawer group-hover:block lg:hidden'>Contacts</span></Link></li>
         <li

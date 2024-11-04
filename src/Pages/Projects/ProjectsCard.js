@@ -21,7 +21,7 @@ const ProjectsCard = ({ project }) => {
                     <a href={live} target="_blank" className='bg-gray-200 rounded-md shadow-lg'><p type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md border border-emerald-500 hover:bg-emerald-500 text-emerald-500 hover:text-white hover:scale-110 ease-in-out duration-500" style={{ boxShadow: '2px 3px 5px gray' }}><FaGlobe className='text-3xl hover:animate-spin hover:duration-75' />
                     </p></a>
                 </div>
-                <Link to={`/project/${_id}`} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md border border-emerald-500 lg:bg-gray-200 hover:bg-emerald-500 text-emerald-500 uppercase hover:text-white hover:scale-110 ease-in-out duration-500" style={{ boxShadow: '2px 3px 5px gray' }}>details
+                <Link to={`/api/project/${_id}`} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md border border-emerald-500 lg:bg-gray-200 hover:bg-emerald-500 text-emerald-500 uppercase hover:text-white hover:scale-110 ease-in-out duration-500" style={{ boxShadow: '2px 3px 5px gray' }}>details
                     <FaRegStickyNote className='ml-2' />
                 </Link>
             </div>

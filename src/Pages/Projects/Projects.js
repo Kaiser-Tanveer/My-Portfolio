@@ -5,10 +5,10 @@ import useTitle from '../../MyHooks/useTitle';
 import Zoom from 'react-reveal';
 import axios from 'axios';
 
-// Set the BASE_URL based on the environment (production or development)
+//------- BASE_URL based on the environment (production or development) --------//
 const BASE_URL = process.env.NODE_ENV === 'production'
-    ? 'https://portfolio-server-nchp36izs-kaisertanveers-projects.vercel.app'
-    : 'http://localhost:3000';
+    ? 'https://portfolio-server-bay-seven.vercel.app/'
+    : 'http://localhost:3003/';
 
 const Projects = () => {
     useTitle('Projects');
@@ -20,9 +20,10 @@ const Projects = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get(`${BASE_URL}/projects`);
+                const response = await axios.get(`${BASE_URL}api/projects`);
                 setProjects(response.data);
             } catch (err) {
+                console.error('Error fetching projects:', err.response ? err.response.data : err.message);
                 setError(err);
             } finally {
                 setIsLoading(false);
