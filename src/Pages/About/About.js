@@ -25,7 +25,7 @@ const About = () => {
                         <p className="text-justify mx-auto pt-5 opacity-75 hover:opacity-100 duration-500">
                             As a skilled MERN Stack Developer, I specialize in building robust and scalable web applications using MongoDB, Express.js, React, and Node.js. My deep passion for coding fuels my commitment to delivering high-quality solutions and driving innovation. I thrive in dynamic environments where I can explore new technologies and contribute to a company’s growth. With a relentless drive to excel, I am dedicated to advancing both the success of the company and my own professional development. Let's create impactful digital experiences together!
                         </p>
-                        <div className="flex justify-center gap-4 my-5">
+                        <div className="flex justify-center gap-[10px] md:gap-4 my-5">
                             {socialLinks.map(({ href, icon: Icon, target, rotation }, idx) => (
                                 <a
                                     key={idx}

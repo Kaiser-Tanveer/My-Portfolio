@@ -31,7 +31,7 @@ const Banner = () => {
             style={{ boxShadow: '2px 3px 12px rgb(16, 185, 129)' }}
         >
             <div
-                className="hero h-full rounded-lg"
+                className="hero h-full rounded-lg bg-cover bg-center"
                 style={{
                     backgroundImage: `linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #000000), url(${bg})`,
                 }}
@@ -79,11 +79,11 @@ const Banner = () => {
                                 and my own skills. Let’s build something amazing together!
                             </p>
                         </div>
-                        <div className="flex mb-5 ml-3 md:ml-0 justify-center lg:justify-start">
+                        <div className="w-full flex mb-5 ml-3 md:ml-0 justify-between md:justify-center lg:justify-start">
                             {socialLinks.map(({ href, icon }, index) => (
                                 <a
                                     key={index}
-                                    className="p-4 text-xl ml-5 first:ml-0 rounded-full hover:bg-emerald-500 duration-500"
+                                    className="p-4 text-xl md:ml-5 first:ml-0 rounded-full hover:bg-emerald-500 duration-500"
                                     style={{ boxShadow: '2px 3px 12px gray' }}
                                     href={href}
                                     target="_blank"
