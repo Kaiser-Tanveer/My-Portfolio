@@ -44,7 +44,7 @@ const Projects = () => {
     return (
         <div className='mb-32 w-5/6 mx-auto'>
             <Zoom>
-                <h1 className='pb-10 text-white text-5xl text-center lg:text-left font-bold'>PROJECTS</h1>
+                <h1 className='pb-10 text-white text-5xl text-left font-bold'>PROJECTS</h1>
             </Zoom>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {

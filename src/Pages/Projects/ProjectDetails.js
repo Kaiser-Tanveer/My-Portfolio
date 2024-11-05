@@ -53,7 +53,7 @@ const ProjectDetails = () => {
                 </div>
                 <div className='text-white'>
                     <h3 className='text-3xl pb-10 text-center font-bold underline'>Project Details</h3>
-                    <ol className=''>
+                    <ol className='ml-2 md:ml-0 text-justify'>
                         <li className='mb-4 list-disc'>{details}</li>
                         <li className='mb-4 list-disc'>{detail2}</li>
                         <li className='mb-4 list-disc'>{detail3}</li>

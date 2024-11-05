@@ -3,7 +3,7 @@ import Zoom from 'react-reveal';
 
 const Experiences = () => {
     return (
-        <div className='w-5/6 grid md:grid-cols-2 gap-10 mx-auto mb-32'>
+        <div className='w-5/6 grid md:grid-cols-2 gap-10 mx-auto mb-24'>
             <Zoom>
                 <div className='mx-auto py-10 w-full text-center bg-emerald-500 border rounded-lg' style={{ boxShadow: '2px 3px 12px gray' }}>
                     <h2 className='text-6xl font-bold text-white'>1 Year+</h2>

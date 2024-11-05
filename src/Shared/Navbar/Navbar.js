@@ -5,12 +5,12 @@ import logo from '../../Assets/PP/mylogo.png';
 import { useState } from 'react';
 
 const Navbar = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const menuItems = <>
         {
             open &&
-            <div className='group duration-500'>
+            <div className='group duration-500 lg:hidden'>
                 <li
                     onClick={() => setOpen(!open)}
                     className='hover:transition-all bg-gray-600 lg:bg-transparent
@@ -18,7 +18,7 @@ const Navbar = () => {
                 <li
                     onClick={() => setOpen(!open)}
                     className='hover:transition-all bg-gray-600 lg:bg-transparent
-                hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/projects'><HiOutlineBriefcase /><span className='hideDrawer group-hover:block lg:hidden'>Projects</span></Link></li>
+                hover:scale-110 hover:duration-500 hover:shadow-md hover:shadow-gray-200 showDrawer mb-2 border border-emerald-500 text-xl hover:bg-emerald-500 rounded-md text-white'><Link to='/api/projects'><HiOutlineBriefcase /><span className='hideDrawer group-hover:block lg:hidden'>Projects</span></Link></li>
                 <li
                     onClick={() => setOpen(!open)}
                     className='hover:transition-all bg-gray-600 lg:bg-transparent
