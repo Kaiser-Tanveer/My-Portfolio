@@ -44,7 +44,7 @@ const Banner = () => {
                         className="lg:w-3/5 lg:-ml-0 rounded-t-lg mx-auto shadow-lg"
                         style={{ boxShadow: 'inset 2px 3px 12px rgb(16, 185, 129)' }}
                     />
-                    <article className="text-center lg:text-left lg:-ml-[170px] lg:w-[60vw] pr-5">
+                    <article className="text-center lg:text-left lg:-ml-[170px] lg:w-[60vw]">
                         <Zoom>
                             <h1 className="mb-5 text-5xl font-bold mt-6 text-emerald-500">
                                 Hi! <span className="text-white">I'm Kaiser Tanveer</span>
@@ -70,7 +70,7 @@ const Banner = () => {
                             </span>
                         </h1>
                         <div className="w-full lg:w-[38em]">
-                            <p className="ml-4 md:ml-0 mb-5 opacity-75 hover:opacity-100 cursor-text text-justify">
+                            <p className="mx-2 md:ml-0 mb-5 opacity-75 hover:opacity-100 cursor-text text-justify">
                                 I am a dedicated Web Application Developer with a deep passion for
                                 crafting high-quality code. My enthusiasm for coding drives me to
                                 contribute effectively to a company where I can explore new
@@ -79,11 +79,11 @@ const Banner = () => {
                                 and my own skills. Let’s build something amazing together!
                             </p>
                         </div>
-                        <div className="w-full flex mb-5 ml-3 md:ml-0 justify-between md:justify-center lg:justify-start">
+                        <div className="w-full flex mb-5 justify-between md:justify-center lg:justify-start mx-auto md:mx-0 md:gap-4">
                             {socialLinks.map(({ href, icon }, index) => (
                                 <a
                                     key={index}
-                                    className="p-4 text-xl md:ml-5 first:ml-0 rounded-full hover:bg-emerald-500 duration-500"
+                                    className="p-4 text-xl rounded-full hover:bg-emerald-500 duration-500"
                                     style={{ boxShadow: '2px 3px 12px gray' }}
                                     href={href}
                                     target="_blank"
