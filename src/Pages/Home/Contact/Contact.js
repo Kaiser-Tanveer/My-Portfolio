@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
-import contact from '../../../Assets/Banners/contactUs.png';
 import useTitle from '../../../MyHooks/useTitle';
 import Zoom from 'react-reveal';
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { HiOutlineCheckCircle } from 'react-icons/hi';
 import { ThreeDots } from 'react-loader-spinner';
 
-// https://i.ibb.co.com/hCS2fvV/Fmcg.gif
 
 const Contact = () => {
     useTitle('Contacts');
@@ -64,7 +62,7 @@ const Contact = () => {
                         }
                     </h2>
                 </Zoom>
-                <p className="text-gray-100 pt-6 text-center text-justify md:text-left">
+                <p className="text-gray-100 pt-6 text-justify md:text-left">
                     {isSubmitted ? "Thank you for reaching out. I appreciate your message and will be responding to your email promptly.":  "Need to build or update a Web Application?"} <br /> {isSubmitted? "" : "Please, Contact me →"}
                 </p>
                 <img src={isSubmitted ? "https://i.ibb.co.com/ssMVMjL/Email-sent-successfully.gif" : "https://i.ibb.co.com/DrBv6HG/fd30cf2f7778b3401b7f2cd678777f22.gif"} alt="Contact Banner" className={isSubmitted ? "w-full mt-7 rounded-md border-2 border-emerald-500" : "w-auto h-full mt-7 border-b-2 border-emerald-500 rounded-t-md"} />
