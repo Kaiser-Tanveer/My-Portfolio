@@ -17,8 +17,8 @@ const Contact = () => {
 
     // Handle form submission with EmailJS
     const sendEmail = (e) => {
-        e.preventDefault();
         setIsSubmitting(true);
+        e.preventDefault();
         const { user_name, user_email, subject, message } = form.current;
 
         // Validate form fields
@@ -97,16 +97,16 @@ const Contact = () => {
                     ))}
                     <button
                         type="submit"
-                        className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded border border-emerald-500 hover:bg-emerald-500 text-emerald-500 hover:text-white hover:scale-110 duration-500"
+                        className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded border border-emerald-500 hover:bg-emerald-500 text-emerald-500 hover:text-white duration-500 group"
                     >
                         {
                             isSubmitting ?
-                            <div className='flex justify-center items-center w-full'>
+                            <div className='flex justify-center items-center w-full text-white'>
                             <ThreeDots
                                 height="20"
                                 width="40"
                                 radius="12"
-                                color="rgb(16, 185, 129)"
+                                color="white"
                                 ariaLabel="three-dots-loading"
                                 wrapperStyle={{}}
                                 wrapperClassName=""
