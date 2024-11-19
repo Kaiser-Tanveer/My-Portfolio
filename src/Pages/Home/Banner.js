@@ -37,14 +37,15 @@ const Banner = () => {
                 }}
             >
                 <div className="hero-overlay opacity-70 rounded-lg"></div>
-                <div className="hero-content text-center text-white grid items-center justify-center lg:grid-cols-2 rounded-lg">
-                    <img
-                        src="https://i.ibb.co/zJFvfJ4/My-PP.jpg"
-                        alt="myProfile"
-                        className="lg:w-3/5 lg:-ml-0 rounded-t-lg mx-auto shadow-lg"
-                        style={{ boxShadow: 'inset 2px 3px 12px rgb(16, 185, 129)' }}
+                <div className="hero-content text-center text-white grid items-center justify-center lg:grid-cols-2 rounded-lg md:mx-10">
+                <img
+                    src="https://i.ibb.co/zJFvfJ4/My-PP.jpg"
+                    alt="myProfile"
+                    className="lg:w-3/5 lg:-ml-0 rounded-t-lg mx-auto shadow-lg"
+                    loading="lazy"
+                    style={{ boxShadow: 'inset 2px 3px 12px rgb(16, 185, 129)' }}
                     />
-                    <article className="text-center lg:text-left lg:-ml-[170px] lg:w-[60vw]">
+                    <article className="text-center lg:text-left lg:-ml-[140px]">
                         <Zoom>
                             <h1 className="mb-5 text-5xl font-bold mt-6 text-emerald-500">
                                 Hi! <span className="text-white">I'm Kaiser Tanveer</span>
@@ -94,7 +95,7 @@ const Banner = () => {
                             ))}
                         </div>
                         <div className="mx-auto w-full ml-2 md:ml-0 lg:mr-auto my-4">
-                            <a href={resume} download>
+                            <a href={resume} download aria-label="Download Resume">
                                 <BtnComponent>
                                     Download Resume <HiOutlineDownload className="ml-3" />
                                 </BtnComponent>
