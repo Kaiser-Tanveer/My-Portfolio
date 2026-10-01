@@ -1,11 +1,7 @@
-import React from 'react';
-import bg from '../../Assets/PP/bannerBg.jpg';
+import React, { useEffect, useRef } from 'react';
 import BtnComponent from '../../Components/BtnComponent/BtnComponent';
-import { HiOutlineDownload } from 'react-icons/hi';
-import { Typewriter } from 'react-simple-typewriter';
 import resume from '../../Assets/KaiserTanveerResume.pdf';
 import useTitle from '../../MyHooks/useTitle';
-import { Zoom } from 'react-reveal';
 import {
     FaEnvelope,
     FaFacebookF,
@@ -15,93 +11,109 @@ import {
 } from 'react-icons/fa';
 
 const socialLinks = [
-    { href: 'mailto:kaisertanveer0@gmail.com', icon: <FaEnvelope /> },
-    { href: 'https://web.facebook.com/Kaiser2581', icon: <FaFacebookF /> },
-    { href: 'https://www.linkedin.com/in/kaiser-tanveer/', icon: <FaLinkedinIn /> },
-    { href: 'https://github.com/Kaiser-Tanveer', icon: <FaGithub /> },
-    { href: 'tel:+8801851072581', icon: <FaPhone className="rotate-180" /> },
+    { href: 'mailto:kaisertanveer0@gmail.com', icon: <FaEnvelope />, label: 'Email' },
+    { href: 'https://web.facebook.com/Kaiser2581', icon: <FaFacebookF />, label: 'Facebook' },
+    { href: 'https://www.linkedin.com/in/kaiser-tanveer/', icon: <FaLinkedinIn />, label: 'LinkedIn' },
+    { href: 'https://github.com/Kaiser-Tanveer', icon: <FaGithub />, label: 'GitHub' },
+    { href: 'tel:+8801851072581', icon: <FaPhone className="rotate-180" />, label: 'Phone' },
 ];
 
 const Banner = () => {
     useTitle('Home');
+    const bootRef = useRef(null);
+
+    // Boot-sequence typing effect — a single orchestrated moment on load.
+    useEffect(() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const el = bootRef.current;
+        if (reduceMotion || !el) {
+            if (el) el.innerHTML = 'session ready <span class="text-[color:var(--green)]">... done</span>';
+            return;
+        }
+        const lines = [
+            'booting portfolio.exe',
+            'loading modules: react, node, express, mongodb',
+            'session ready',
+        ];
+        let li = 0, ci = 0, timeoutId;
+        const typeLine = () => {
+            if (li >= lines.length) {
+                el.innerHTML = lines[lines.length - 1] + '<span class="text-[color:var(--green)]"> ... done</span>';
+                return;
+            }
+            el.textContent = lines[li].slice(0, ci);
+            ci++;
+            if (ci <= lines[li].length) {
+                timeoutId = setTimeout(typeLine, 16);
+            } else {
+                li++; ci = 0;
+                timeoutId = setTimeout(typeLine, li >= lines.length ? 0 : 260);
+            }
+        };
+        typeLine();
+        return () => clearTimeout(timeoutId);
+    }, []);
 
     return (
-        <div
-            className="w-full md:w-5/6 mb-24 mx-auto rounded-lg"
-            style={{ boxShadow: '2px 3px 12px rgb(16, 185, 129)' }}
-        >
-            <div
-                className="hero h-full rounded-lg bg-cover bg-center"
-                style={{
-                    backgroundImage: `linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #000000), url(${bg})`,
-                }}
-            >
-                <div className="hero-overlay opacity-70 rounded-lg"></div>
-                <div className="hero-content text-center text-white grid items-center justify-center lg:grid-cols-2 rounded-lg md:mx-10">
-                <img
-                    src="https://i.ibb.co/zJFvfJ4/My-PP.jpg"
-                    alt="myProfile"
-                    className="lg:w-3/5 lg:-ml-0 rounded-t-lg mx-auto shadow-lg"
-                    loading="lazy"
-                    style={{ boxShadow: 'inset 2px 3px 12px rgb(16, 185, 129)' }}
-                    />
-                    <article className="text-center lg:text-left lg:-ml-[140px]">
-                        <Zoom>
-                            <h1 className="mb-5 text-5xl font-bold mt-6 text-emerald-500">
-                                Hi! <span className="text-white">I'm Kaiser Tanveer</span>
-                            </h1>
-                        </Zoom>
-                        <h1 className="mb-5 text-5xl font-bold">
-                            I'm a{' '}
-                            <span className="text-emerald-500">
-                                <Typewriter
-                                    words={[
-                                        'Web Developer',
-                                        'Front-End Developer',
-                                        'MERN Stack Developer',
-                                        'React Developer',
-                                    ]}
-                                    loop={5}
-                                    cursor
-                                    cursorStyle="|"
-                                    typeSpeed={70}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                                />
-                            </span>
-                        </h1>
-                        <div className="w-full lg:w-[38em]">
-                            <p className="mx-2 md:ml-0 mb-5 opacity-75 hover:opacity-100 cursor-text text-justify">
-                                I am a dedicated Web Application Developer with a deep passion for
-                                crafting high-quality code. My enthusiasm for coding drives me to
-                                contribute effectively to a company where I can explore new
-                                opportunities and grow both professionally and personally. I am
-                                committed to working diligently to advance the company’s success
-                                and my own skills. Let’s build something amazing together!
-                            </p>
-                        </div>
-                        <div className="w-full flex mb-5 justify-between md:justify-center lg:justify-start mx-auto md:mx-0 md:gap-4">
-                            {socialLinks.map(({ href, icon }, index) => (
-                                <a
-                                    key={index}
-                                    className="p-4 text-xl rounded-full hover:bg-emerald-500 duration-500"
-                                    style={{ boxShadow: '2px 3px 12px gray' }}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {icon}
-                                </a>
-                            ))}
-                        </div>
-                        <div className="mx-auto w-full ml-2 md:ml-0 lg:mr-auto my-4">
-                            <a href={resume} download aria-label="Download Resume">
-                                <BtnComponent>
-                                    Download Resume <HiOutlineDownload className="ml-3" />
-                                </BtnComponent>
+        <div className="w-[92%] max-w-[1100px] mx-auto pt-[70px] pb-10">
+            <div ref={bootRef} className="text-[13px] text-[color:var(--text-dim)] mb-2 min-h-[1.4em]"></div>
+
+            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-11 items-start">
+                <div>
+                    <div className="text-[12px] text-[color:var(--text-faint)] mb-3.5">
+                        <span className="text-[color:var(--green)]">$</span> whoami
+                    </div>
+                    <h1 className="font-semibold text-[color:var(--green-bright)] text-[clamp(1.9rem,4.6vw,3.1rem)] leading-[1.18] mb-5">
+                        MERN Stack Developer building <span className="hl-green">fast, reliable</span> web applications.
+                    </h1>
+                    <p className="text-[14.5px] text-[color:var(--text-dim)] max-w-[62ch] mb-7">
+                        MongoDB &middot; Express &middot; React &middot; Node — I own interfaces end to end,
+                        from component architecture down to the API that feeds them. Clean code, no shortcuts.
+                    </p>
+
+                    <div className="flex items-center gap-4 flex-wrap">
+                        <a href={resume} download aria-label="Download Resume">
+                            <BtnComponent>download resume.pdf</BtnComponent>
+                        </a>
+                        <a
+                            href="#projects"
+                            className="text-[13px] border border-[color:var(--line)] text-[color:var(--green)] rounded-md px-5 py-3 hover:border-[color:var(--green)] transition-colors"
+                        >
+                            view_projects()
+                        </a>
+                    </div>
+
+                    <div className="flex gap-3 mt-6">
+                        {socialLinks.map(({ href, icon, label }, idx) => (
+                            <a
+                                key={idx}
+                                href={href}
+                                target={href.startsWith('http') ? '_blank' : undefined}
+                                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                aria-label={label}
+                                className="w-9 h-9 border border-[color:var(--line)] rounded-md flex items-center justify-center text-[color:var(--text-dim)] hover:text-[color:var(--green)] hover:border-[color:var(--green)] transition-colors text-[13px]"
+                            >
+                                {icon}
                             </a>
-                        </div>
-                    </article>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="win">
+                    <div className="win-bar"><i></i><i></i><i></i><div className="win-title">profile.txt</div></div>
+                    <pre className="m-0 p-5 text-[10px] leading-[1.15] text-[color:var(--green-dim)] overflow-x-auto">
+{`┌──────────────────┐
+│                  │
+│                  │
+│       K T        │
+│                  │
+│                  │
+└──────────────────┘`}
+                    </pre>
+                    <div className="px-4.5 py-3.5 border-t border-dashed border-[color:var(--line)] text-[12px] text-[color:var(--text-dim)] flex justify-between">
+                        <span><span className="pulse-dot mr-1.5"></span>status: open to work</span>
+                        <span>1+ yrs exp</span>
+                    </div>
                 </div>
             </div>
         </div>
