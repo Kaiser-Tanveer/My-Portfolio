@@ -1,20 +1,18 @@
 import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import './index.css';
 import router from './Routes/Routes';
-import MatrixRain from './Components/MatrixRain/MatrixRain';
 import 'react-photo-view/dist/react-photo-view.css';
 import "animate.css/animate.min.css";
+import MatrixRain from './Components/MatrixRain/MatrixRain';
 
 function App() {
   return (
-    <div className='min-h-screen bg-[color:var(--bg)]'>
+    <div className="bg-hack-bg scroll-smooth font-mono relative min-h-screen">
       <div className="crt-overlay"></div>
       <div className="vignette-overlay"></div>
       <MatrixRain />
-      <div className="relative z-[2]">
-        <RouterProvider router={router}>
-        </RouterProvider>
+      <div className="relative z-10">
+        <RouterProvider router={router}></RouterProvider>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-// Subtle Matrix-style digital rain used as a background layer.
-// Skips animating entirely if the visitor has "reduce motion" set.
+// Subtle digital-rain canvas background. Respects prefers-reduced-motion
+// (renders nothing for users who've asked for less motion).
 const MatrixRain = () => {
     const canvasRef = useRef(null);
 
@@ -11,7 +11,9 @@ const MatrixRain = () => {
 
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        let w, h, cols, drops, animationId;
+        let animationId;
+        let cols, drops, w, h;
+
         const chars = 'アイウエオカキクケコサシスセソ01アクセス起動$#{}[]<>/'.split('');
         const fontSize = 15;
 
@@ -25,7 +27,7 @@ const MatrixRain = () => {
         window.addEventListener('resize', resize);
 
         const draw = () => {
-            ctx.fillStyle = 'rgba(5, 8, 6, 0.13)';
+            ctx.fillStyle = 'rgba(5,8,6,0.13)';
             ctx.fillRect(0, 0, w, h);
             ctx.fillStyle = '#3CFF9A';
             ctx.font = `${fontSize}px monospace`;
